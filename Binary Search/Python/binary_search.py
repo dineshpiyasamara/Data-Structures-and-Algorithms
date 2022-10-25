@@ -5,15 +5,12 @@ def binarySearch(arr, l, r, data):
         if arr[mid] == data:
             return mid
 
-        # If element is smaller than mid, then it
-        # can only be present in left subarray
         elif arr[mid] > data:
             return binarySearch(arr, l, mid-1, data)
 
-        # Else the element can only be present
-        # in right subarray
         else:
             return binarySearch(arr, mid + 1, r, data)
+
     else:
         return -1
 
